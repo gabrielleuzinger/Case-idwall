@@ -1785,7 +1785,7 @@ pipe.fit(df_prep_X_train,df_prep_y_train)
 df_prep_ypred_train = pipe.predict(df_prep_X_train)
 ```
 
-    [09:34:00] WARNING: /Users/travis/build/dmlc/xgboost/src/learner.cc:1095: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
+    [16:48:29] WARNING: /Users/travis/build/dmlc/xgboost/src/learner.cc:1095: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
 
 
 ---
@@ -1802,8 +1802,8 @@ print('Acurácia: %f'% accuracy_score(df_prep_y_train,df_prep_ypred_train))
 print('F1-score: %f'% f1_score(df_prep_y_train,df_prep_ypred_train))
 ```
 
-    Acurácia: 0.998596
-    F1-score: 0.998172
+    Acurácia: 1.000000
+    F1-score: 1.000000
 
 
 
@@ -1871,52 +1871,52 @@ pd.DataFrame(model.feature_importances_,columns=['importance']).join(df_prep_X_t
   <tbody>
     <tr>
       <th>1</th>
-      <td>0.432049</td>
+      <td>0.445068</td>
       <td>Sex</td>
     </tr>
     <tr>
       <th>0</th>
-      <td>0.213864</td>
+      <td>0.185649</td>
       <td>Pclass</td>
     </tr>
     <tr>
-      <th>7</th>
-      <td>0.112079</td>
-      <td>Cabin</td>
-    </tr>
-    <tr>
       <th>3</th>
-      <td>0.066573</td>
+      <td>0.108833</td>
       <td>SibSp</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>0.036169</td>
-      <td>Age</td>
+      <th>7</th>
+      <td>0.068019</td>
+      <td>Cabin</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>0.033592</td>
+      <td>0.037861</td>
       <td>Fare</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.032256</td>
+      <td>0.036258</td>
       <td>Ticket</td>
     </tr>
     <tr>
-      <th>10</th>
-      <td>0.029701</td>
-      <td>Surname</td>
-    </tr>
-    <tr>
       <th>8</th>
-      <td>0.026170</td>
+      <td>0.035793</td>
       <td>Embarked</td>
     </tr>
     <tr>
+      <th>2</th>
+      <td>0.035160</td>
+      <td>Age</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>0.030061</td>
+      <td>Surname</td>
+    </tr>
+    <tr>
       <th>4</th>
-      <td>0.017547</td>
+      <td>0.017296</td>
       <td>Parch</td>
     </tr>
     <tr>
@@ -1953,9 +1953,9 @@ print('Acurácia: %f'% accuracy_score(df_prep_y_test,df_prep_ypred_test))
 print('F1-score: %f'% f1_score(df_prep_y_test,df_prep_ypred_test))
 ```
 
-    [09:34:01] WARNING: /Users/travis/build/dmlc/xgboost/src/learner.cc:1095: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    Acurácia: 0.798883
-    F1-score: 0.723077
+    [16:48:31] WARNING: /Users/travis/build/dmlc/xgboost/src/learner.cc:1095: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
+    Acurácia: 0.759777
+    F1-score: 0.681481
 
 
 
@@ -2004,8 +2004,8 @@ print('Acurácia: %f'% accuracy_score(df_prep_y_train,df_prep_ypred_train))
 print('F1-score: %f'% f1_score(df_prep_y_train,df_prep_ypred_train))
 ```
 
-    Acurácia: 0.948034
-    F1-score: 0.930582
+    Acurácia: 0.952247
+    F1-score: 0.935361
 
 
 
@@ -2065,57 +2065,57 @@ pd.DataFrame(model.feature_importances_,columns=['importance']).join(df_prep_X_t
   <tbody>
     <tr>
       <th>1</th>
-      <td>26.095586</td>
+      <td>29.487863</td>
       <td>Sex</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>13.500231</td>
-      <td>Ticket</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>12.347893</td>
-      <td>Age</td>
-    </tr>
-    <tr>
       <th>10</th>
-      <td>12.124911</td>
+      <td>12.787732</td>
       <td>Surname</td>
     </tr>
     <tr>
+      <th>2</th>
+      <td>12.223062</td>
+      <td>Age</td>
+    </tr>
+    <tr>
       <th>6</th>
-      <td>10.811466</td>
+      <td>10.513971</td>
       <td>Fare</td>
     </tr>
     <tr>
+      <th>5</th>
+      <td>10.434821</td>
+      <td>Ticket</td>
+    </tr>
+    <tr>
       <th>0</th>
-      <td>8.623811</td>
+      <td>9.459237</td>
       <td>Pclass</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>5.022044</td>
+      <td>4.790077</td>
       <td>Parch</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>4.266537</td>
-      <td>SibSp</td>
-    </tr>
-    <tr>
       <th>8</th>
-      <td>3.253397</td>
+      <td>4.225883</td>
       <td>Embarked</td>
     </tr>
     <tr>
+      <th>3</th>
+      <td>2.653455</td>
+      <td>SibSp</td>
+    </tr>
+    <tr>
       <th>9</th>
-      <td>2.035203</td>
+      <td>1.850849</td>
       <td>check_cabin</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>1.918922</td>
+      <td>1.573050</td>
       <td>Cabin</td>
     </tr>
   </tbody>
@@ -2133,8 +2133,8 @@ print('Acurácia: %f'% accuracy_score(df_prep_y_test,df_prep_ypred_test))
 print('F1-score: %f'% f1_score(df_prep_y_test,df_prep_ypred_test))
 ```
 
-    Acurácia: 0.815642
-    F1-score: 0.748092
+    Acurácia: 0.759777
+    F1-score: 0.686131
 
 
 
@@ -2192,8 +2192,8 @@ print('Acurácia: %f'% accuracy_score(df_cat_y_train,df_cat_ypred_train))
 print('F1-score: %f'% f1_score(df_cat_y_train,df_cat_ypred_train))
 ```
 
-    Acurácia: 0.907173
-    F1-score: 0.865306
+    Acurácia: 0.929677
+    F1-score: 0.900000
 
 
 
@@ -2252,57 +2252,57 @@ pd.DataFrame(model.feature_importances_,columns=['importance']).join(df_prep_X_t
   <tbody>
     <tr>
       <th>1</th>
-      <td>32.306026</td>
+      <td>33.043313</td>
       <td>Sex</td>
     </tr>
     <tr>
       <th>0</th>
-      <td>11.168156</td>
+      <td>12.703127</td>
       <td>Pclass</td>
     </tr>
     <tr>
-      <th>10</th>
-      <td>9.452363</td>
-      <td>Surname</td>
-    </tr>
-    <tr>
       <th>2</th>
-      <td>9.319421</td>
+      <td>10.498529</td>
       <td>Age</td>
     </tr>
     <tr>
-      <th>8</th>
-      <td>8.730699</td>
-      <td>Embarked</td>
+      <th>5</th>
+      <td>8.649969</td>
+      <td>Ticket</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>8.559077</td>
+      <td>7.763811</td>
       <td>Fare</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>7.494912</td>
+      <td>7.341415</td>
       <td>Cabin</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>6.461712</td>
-      <td>Ticket</td>
+      <th>8</th>
+      <td>6.603816</td>
+      <td>Embarked</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>6.267135</td>
+      <td>Surname</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>2.869833</td>
+      <td>4.586359</td>
       <td>Parch</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1.918905</td>
+      <td>1.347614</td>
       <td>SibSp</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>1.718895</td>
+      <td>1.194912</td>
       <td>check_cabin</td>
     </tr>
   </tbody>
@@ -2319,8 +2319,8 @@ print('Acurácia: %f'% accuracy_score(df_cat_y_test,df_cat_ypred_test))
 print('F1-score: %f'% f1_score(df_cat_y_test,df_cat_ypred_test))
 ```
 
-    Acurácia: 0.814607
-    F1-score: 0.755556
+    Acurácia: 0.825843
+    F1-score: 0.743802
 
 
 
